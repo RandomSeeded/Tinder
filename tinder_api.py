@@ -46,6 +46,7 @@ def get_recommendations():
     '''
     try:
         r = requests.get('https://api.gotinder.com/user/recs', headers=headers)
+        print r
         return r.json()
     except requests.exceptions.RequestException as e:
         print("Something went wrong with getting recomendations:", e)
@@ -194,6 +195,14 @@ def dislike(person_id):
     except requests.exceptions.RequestException as e:
         print("Something went wrong. Could not dislike:", e)
 
+def get_matches():
+    try:
+        # url = config.host + '/matches'
+        url = config.host + '/v2/matches'
+        r = requests.get(url, headers=headers)
+        return r.json()
+    except requests.exceptions.RequestException as e:
+        print("Something went wrong. Could not get your match info:", e)
 
 def report(person_id, cause, explanation=''):
     '''
@@ -219,6 +228,15 @@ def match_info(match_id):
     except requests.exceptions.RequestException as e:
         print("Something went wrong. Could not get your match info:", e)
 
+print authverif()
+# print get_self()
+# print json.dumps(get_meta(), indent=4)
+matches = get_matches()
+# print json.dumps(matches['data']['matches'][0], indent=4)
+test_id = matches['data']['matches'][0]['id']
+send_msg(test_id, 'hmmm')
+print test_id
+# print get_recs_v2()
 
 # def see_friends():
 #     try:
