@@ -234,7 +234,7 @@ print authverif()
 matches = get_matches()
 # print json.dumps(matches['data']['matches'][0], indent=4)
 test_id = matches['data']['matches'][0]['id']
-send_msg(test_id, 'hmmm')
+# send_msg(test_id, 'hmmm')
 print test_id
 # print get_recs_v2()
 
