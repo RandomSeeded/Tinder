@@ -13,4 +13,4 @@ Retrieve your Tinder Facebook ID & Access Token
 
 ### Thanks
 
-Shoutouts to [fbessez](https://github.com/fbessez/Tinder) and [rtt]('https://gist.github.com/rtt/10403467#file-tinder-api-documentation-md') for all the hard work here.
+Shoutouts to [fbessez](https://github.com/fbessez/Tinder) and [rtt](https://gist.github.com/rtt/10403467#file-tinder-api-documentation-md) for all the hard work here.
