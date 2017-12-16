@@ -4,12 +4,20 @@
 
 Retrieve your Tinder Facebook ID & Access Token
 
-### Usage
+### Setup and Usage
+
+Setup:
 
 1. Install python and pip
 2. `pip install robobrowser`, `pip install requests`, `pip install lxml`
-3. Put your facebook username and password in facebook_credentials.py
-4. `python get_facebook_tokens.py`
+
+Single usage:
+
+1. Put your facebook username and password in facebook_credentials.py
+2. `python get_facebook_tokens.py`
+
+As SDK:
+1. `python get_facebook_tokens.py [username] [password]`
 
 ### Thanks
 

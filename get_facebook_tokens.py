@@ -1,6 +1,7 @@
 # Used from  https://github.com/philipperemy/Deep-Learning-Tinder/blob/master/tinder_token.py
 
 import re
+import sys
 
 import requests
 import robobrowser
@@ -38,7 +39,15 @@ def get_fb_id(access_token):
         'https://graph.facebook.com/me?access_token=' + access_token)
     return req.json()["id"]
 
-fb_access_token = get_fb_access_token(facebook_credentials.fb_username, facebook_credentials.fb_password)
+if len(sys.argv) == 3:
+    facebook_username = sys.argv[1]
+    facebook_password = sys.argv[2]
+else:
+    facebook_username = facebook_credentials.fb_username,
+    facebook_password = facebook_credentials.fb_password,
+
+fb_access_token = get_fb_access_token(facebook_username, facebook_password)
 fb_id = get_fb_id(fb_access_token)
+
 print 'Facebook Access Token: {}'.format(fb_access_token)
 print 'Facebook ID: {}'.format(fb_id)
