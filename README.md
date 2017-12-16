@@ -10,14 +10,7 @@ Setup:
 
 1. Install python and pip
 2. `pip install robobrowser`, `pip install requests`, `pip install lxml`
-
-Single usage:
-
-1. Put your facebook username and password in facebook_credentials.py
-2. `python get_facebook_tokens.py`
-
-As SDK:
-1. `python get_facebook_tokens.py [username] [password]`
+3. `python get_facebook_tokens.py [username] [password]`
 
 ### Thanks
 
